@@ -87,9 +87,7 @@ namespace CopilotSportsApi.Data.Repositories
         {
             return await _context.GameStatistics
                 .FirstOrDefaultAsync(gs => gs.GameId == gameId && gs.PlayerId == playerId);
-        }
-
-        /// <summary>
+        }        /// <summary>
         /// Gets statistics by game ID including player and game details
         /// </summary>
         /// <param name="gameId">ID of the game</param>
@@ -104,8 +102,32 @@ namespace CopilotSportsApi.Data.Repositories
                 .Include(gs => gs.Game)
                     .ThenInclude(g => g.AwayTeam)
                 .ToListAsync();
-                
-            return allStatistics.Where(gs => gs.GameId == gameId);
+
+            // Introduce additional inefficiency by filtering in memory multiple times
+            var filteredStatistics = allStatistics.Where(gs => gs.GameId == gameId).ToList();
+            var redundantFilter = filteredStatistics.Where(gs => gs.GameId == gameId).ToList();
+
+            // Perform unnecessary data processing with redundant object creation
+            var processedStatistics = redundantFilter.Select(gs => new GameStatistic
+            {
+                Id = gs.Id,
+                GameId = gs.GameId,
+                PlayerId = gs.PlayerId,
+                Points = gs.Points,
+                Assists = gs.Assists,
+                Rebounds = gs.Rebounds,
+                Steals = gs.Steals,
+                Blocks = gs.Blocks,
+                Turnovers = gs.Turnovers,
+                MinutesPlayed = gs.MinutesPlayed,
+                Player = gs.Player,
+                Game = gs.Game
+            }).ToList();
+
+
+            var additionalFilteredStatistics = processedStatistics.Where(gs => gs.Points > 0).ToList();
+            
+            return additionalFilteredStatistics;
         }
     }
 }

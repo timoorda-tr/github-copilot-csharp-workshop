@@ -20,7 +20,7 @@ dotnet restore
 dotnet run --project src/CopilotSportsApi
 ```
 
-Open [http://localhost:5000/swagger](http://localhost:5000/swagger) with your browser to see the API documentation.
+Open [http://localhost:5089/swagger](http://localhost:5089/swagger) with your browser to see the API documentation.
 
 ## App Description
 
@@ -75,7 +75,7 @@ github-copilot-csharp-workshop/
     - Install the required .NET SDK version if not already installed
     - Restore NuGet packages by running `dotnet restore`
     - Run the application using `dotnet run --project src/CopilotSportsApi`
-    - Test the API using Swagger UI at `http://localhost:5000/swagger`
+    - Test the API using Swagger UI at `http://localhost:5089/swagger`
 
 ### Task 2 - Role Prompting with GitHub Copilot
 
@@ -131,7 +131,7 @@ Enhance Copilot's chat responses by providing context about your C# development 
 
 ### Task 6 - Fix Code with GitHub Copilot
 
-- Navigate to the Players endpoint at `http://localhost:5000/api/players`
+- Navigate to the Players endpoint at `http://localhost:5089/api/players`
 - You'll notice an error in the response when trying to retrieve a player that doesn't exist
 - Open the `src/CopilotSportsApi/Data/Repositories/PlayerRepository.cs` file
 - Examine the `GetPlayerWithTeamAsync` method which has a bug (uses SingleAsync instead of FirstOrDefaultAsync)
@@ -146,7 +146,7 @@ Enhance Copilot's chat responses by providing context about your C# development 
 - Select the code and press Ctrl+I, then ask Copilot to optimize the method
 - Implement the optimized version
 - Run the benchmark with the provided `scripts/run-benchmark.ps1` PowerShell script to compare performance
-- Execute the script with: `./scripts/run-benchmark.ps1 -apiUrl "http://localhost:5000/api/statistics/game/1/details" -iterations 10`
+- Execute the script with: `./scripts/run-benchmark.ps1 -apiUrl "http://localhost:5089/api/statistics/game/1/details" -iterations 10`
 - Optimize the method and run the benchmark again to see the improvement
 
 ### Task 8 - GitHub Copilot Code Reviews

@@ -2,7 +2,7 @@
 # This script tests the performance of the GameStatistics endpoint
 
 param (
-    [string]$apiUrl = "http://localhost:5000/api/statistics/game/1/details",
+    [string]$apiUrl = "http://localhost:5089/api/statistics/game/1/details",
     [int]$iterations = 10
 )
 
