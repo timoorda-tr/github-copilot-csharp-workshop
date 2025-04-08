@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CopilotSportsApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ba0006ed23a5451dd29570b480a801813ddf9db")]
 [assembly: System.Reflection.AssemblyProductAttribute("CopilotSportsApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CopilotSportsApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
