@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9E5D9C57-1FA3-4EED-A830-3807E6BCF8E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopilotSportsApi", "src\CopilotSportsApi\CopilotSportsApi.csproj", "{EA6E2115-8EA3-45A6-8587-3A9888B3C381}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{33732279-8FB0-40EB-AA3F-6A6E74E38578}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopilotSportsApi.Tests", "tests\CopilotSportsApi.Tests\CopilotSportsApi.Tests.csproj", "{2CEF8234-A248-41CC-90F6-56D94CC4CD54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA6E2115-8EA3-45A6-8587-3A9888B3C381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA6E2115-8EA3-45A6-8587-3A9888B3C381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA6E2115-8EA3-45A6-8587-3A9888B3C381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA6E2115-8EA3-45A6-8587-3A9888B3C381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CEF8234-A248-41CC-90F6-56D94CC4CD54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CEF8234-A248-41CC-90F6-56D94CC4CD54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CEF8234-A248-41CC-90F6-56D94CC4CD54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CEF8234-A248-41CC-90F6-56D94CC4CD54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA6E2115-8EA3-45A6-8587-3A9888B3C381} = {9E5D9C57-1FA3-4EED-A830-3807E6BCF8E5}
+		{2CEF8234-A248-41CC-90F6-56D94CC4CD54} = {33732279-8FB0-40EB-AA3F-6A6E74E38578}
+	EndGlobalSection
+EndGlobal
