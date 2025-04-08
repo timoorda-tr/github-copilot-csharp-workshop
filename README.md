@@ -8,7 +8,7 @@ First, set up your development environment:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/github-copilot-csharp-workshop.git
+git clone https://github.com/timoorda-tr/github-copilot-csharp-workshop.git
 
 # Navigate to the project directory
 cd github-copilot-csharp-workshop
