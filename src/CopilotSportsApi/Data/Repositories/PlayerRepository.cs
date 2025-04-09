@@ -58,10 +58,9 @@ namespace CopilotSportsApi.Data.Repositories
         /// <returns>Player with the specified ID including their team, or null if not found</returns>
         public async Task<Player> GetPlayerWithTeamAsync(int id)
         {
-            // Intentional bug here for workshop task 7 - should be FirstOrDefaultAsync
+            // Intentional bug for workshop task 6 - missing Include for Team
             return await _context.Players
-                .Include(p => p.Team)
-                .SingleAsync(p => p.Id == id);
+                .FirstOrDefaultAsync(p => p.Id == id);
         }
 
         /// <summary>

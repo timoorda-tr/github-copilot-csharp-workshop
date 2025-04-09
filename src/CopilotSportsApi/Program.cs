@@ -49,8 +49,8 @@ using (var scope = app.Services.CreateScope())
     var services = scope.ServiceProvider;
     var context = services.GetRequiredService<ApplicationDbContext>();
     
-    // Add seed data here for the workshop
-    // This will be intentionally left incomplete for Task 3
+    // Initialize the database with seed data
+    DbInitializer.Initialize(context);
 }
 
 app.Run();

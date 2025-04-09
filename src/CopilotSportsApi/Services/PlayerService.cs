@@ -132,7 +132,8 @@ namespace CopilotSportsApi.Services
         {
             try
             {
-                // This will throw an exception if the player doesn't exist (intentional bug for workshop task 7)
+                // The issue here is that when the player.Team is accessed, it will be null 
+                // This is an intentional bug for workshop task 6
                 return await _playerRepository.GetPlayerWithTeamAsync(id);
             }
             catch (Exception ex)

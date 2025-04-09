@@ -41,7 +41,7 @@ namespace CopilotSportsApi.Controllers
 
         // GET: api/players/5/team
         [HttpGet("{id}/team")]
-        public async Task<ActionResult<Player>> GetPlayerWithTeam(int id)
+        public async Task<ActionResult<object>> GetPlayerWithTeam(int id)
         {
             var player = await _playerService.GetPlayerWithTeamAsync(id);
             
@@ -50,7 +50,28 @@ namespace CopilotSportsApi.Controllers
                 return NotFound();
             }
             
-            return Ok(player);
+            // This will fail when Team is null due to the missing Include in the repository
+            // Task 6 will require fixing the GetPlayerWithTeamAsync method in PlayerRepository
+            var result = new
+            {
+                Player = new
+                {
+                    player.Id,
+                    player.FirstName,
+                    player.LastName,
+                    player.Position,
+                    player.JerseyNumber
+                },
+                Team = player.Team != null ? new
+                {
+                    player.Team.Id,
+                    player.Team.Name,
+                    player.Team.City,
+                    player.Team.Sport
+                } : null
+            };
+            
+            return Ok(result);
         }
 
         // GET: api/players/team/5
