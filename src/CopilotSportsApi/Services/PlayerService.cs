@@ -132,8 +132,6 @@ namespace CopilotSportsApi.Services
         {
             try
             {
-                // The issue here is that when the player.Team is accessed, it will be null 
-                // This is an intentional bug for workshop task 6
                 return await _playerRepository.GetPlayerWithTeamAsync(id);
             }
             catch (Exception ex)

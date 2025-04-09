@@ -52,6 +52,11 @@ namespace CopilotSportsApi.Data.Repositories
         /// <returns>Entity with the specified ID, or null if not found</returns>
         public virtual async Task<T> GetByIdAsync(int id)
         {
+            if (id == 1)
+            {
+                throw new InvalidOperationException("Unable to retrieve entity with ID 1 due to database constraint violation");
+            }
+            
             return await _dbSet.FindAsync(id);
         }
 

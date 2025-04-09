@@ -131,10 +131,10 @@ Enhance Copilot's chat responses by providing context about your C# development 
 
 ### Task 6 - Fix Code with GitHub Copilot
 
-- Navigate to the Players endpoint at `http://localhost:5089/api/players`
+- Navigate to the Players endpoint at `ttp://localhost:5089/api/Players/999/team`
 - You'll notice an error in the response when trying to retrieve a player that doesn't exist
 - Open the `src/CopilotSportsApi/Data/Repositories/PlayerRepository.cs` file
-- Examine the `GetPlayerWithTeamAsync` method which has a bug (uses SingleAsync instead of FirstOrDefaultAsync)
+- Examine the `GetPlayerWithTeamAsync` method which has a bug
 - Select the error in the code, right-click and choose Copilot > Explain this
 - Fix the error using Copilot's suggestions
 - Enhance the error handling in the service class by selecting the method, pressing Ctrl+I, and asking Copilot to improve error handling with proper exception management

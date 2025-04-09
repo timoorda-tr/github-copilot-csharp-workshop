@@ -949,11 +949,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\timoorda\\source\\github-copilot-csharp-workshop\\tests\\CopilotSportsApi.Tests\\CopilotSportsApi.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\timoorda\\source\\Testing\\github-copilot-csharp-workshop\\tests\\CopilotSportsApi.Tests\\CopilotSportsApi.Tests.csproj",
       "projectName": "CopilotSportsApi.Tests",
-      "projectPath": "C:\\Users\\timoorda\\source\\github-copilot-csharp-workshop\\tests\\CopilotSportsApi.Tests\\CopilotSportsApi.Tests.csproj",
+      "projectPath": "C:\\Users\\timoorda\\source\\Testing\\github-copilot-csharp-workshop\\tests\\CopilotSportsApi.Tests\\CopilotSportsApi.Tests.csproj",
       "packagesPath": "C:\\Users\\timoorda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timoorda\\source\\github-copilot-csharp-workshop\\tests\\CopilotSportsApi.Tests\\obj\\",
+      "outputPath": "C:\\Users\\timoorda\\source\\Testing\\github-copilot-csharp-workshop\\tests\\CopilotSportsApi.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

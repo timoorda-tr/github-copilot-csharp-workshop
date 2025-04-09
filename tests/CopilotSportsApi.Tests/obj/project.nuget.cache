@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aOVpg7d8QNU=",
+  "dgSpecHash": "JFH7Z/EBaH8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\timoorda\\source\\github-copilot-csharp-workshop\\tests\\CopilotSportsApi.Tests\\CopilotSportsApi.Tests.csproj",
+  "projectFilePath": "C:\\Users\\timoorda\\source\\Testing\\github-copilot-csharp-workshop\\tests\\CopilotSportsApi.Tests\\CopilotSportsApi.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timoorda\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
     "C:\\Users\\timoorda\\.nuget\\packages\\microsoft.codecoverage\\17.11.1\\microsoft.codecoverage.17.11.1.nupkg.sha512",

@@ -17,7 +17,6 @@ namespace CopilotSportsApi.Controllers
             _statisticService = statisticService;
         }
 
-        // GET: api/statistics
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GameStatistic>>> GetAllStatistics()
         {
@@ -25,7 +24,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(statistics);
         }
 
-        // GET: api/statistics/5
         [HttpGet("{id}")]
         public async Task<ActionResult<GameStatistic>> GetStatistic(int id)
         {
@@ -39,7 +37,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(statistic);
         }
 
-        // GET: api/statistics/game/5
         [HttpGet("game/{gameId}")]
         public async Task<ActionResult<IEnumerable<GameStatistic>>> GetStatisticsByGame(int gameId)
         {
@@ -47,16 +44,13 @@ namespace CopilotSportsApi.Controllers
             return Ok(statistics);
         }
 
-        // GET: api/statistics/game/5/details
         [HttpGet("game/{gameId}/details")]
         public async Task<ActionResult<IEnumerable<GameStatistic>>> GetGameStatisticsWithDetails(int gameId)
         {
-            // This endpoint intentionally uses the inefficient method for task 8
             var statistics = await _statisticService.GetGameStatisticsAsync(gameId);
             return Ok(statistics);
         }
 
-        // GET: api/statistics/player/5
         [HttpGet("player/{playerId}")]
         public async Task<ActionResult<IEnumerable<GameStatistic>>> GetStatisticsByPlayer(int playerId)
         {
@@ -64,7 +58,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(statistics);
         }
 
-        // GET: api/statistics/game/5/player/10
         [HttpGet("game/{gameId}/player/{playerId}")]
         public async Task<ActionResult<GameStatistic>> GetStatisticByGameAndPlayer(int gameId, int playerId)
         {
@@ -78,7 +71,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(statistic);
         }
 
-        // POST: api/statistics
         [HttpPost]
         public async Task<ActionResult<GameStatistic>> CreateStatistic(GameStatistic statistic)
         {
@@ -86,7 +78,6 @@ namespace CopilotSportsApi.Controllers
             return CreatedAtAction(nameof(GetStatistic), new { id = createdStatistic.Id }, createdStatistic);
         }
 
-        // PUT: api/statistics/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateStatistic(int id, GameStatistic statistic)
         {
@@ -100,7 +91,6 @@ namespace CopilotSportsApi.Controllers
             return NoContent();
         }
 
-        // DELETE: api/statistics/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStatistic(int id)
         {

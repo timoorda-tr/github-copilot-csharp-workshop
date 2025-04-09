@@ -60,7 +60,7 @@ namespace CopilotSportsApi.Data.Repositories
         {
             // Intentional bug for workshop task 6 - missing Include for Team
             return await _context.Players
-                .FirstOrDefaultAsync(p => p.Id == id);
+                .SingleAsync(p => p.Id == id);
         }
 
         /// <summary>

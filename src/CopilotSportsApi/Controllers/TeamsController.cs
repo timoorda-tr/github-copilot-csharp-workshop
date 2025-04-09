@@ -17,7 +17,6 @@ namespace CopilotSportsApi.Controllers
             _teamService = teamService;
         }
 
-        // GET: api/teams
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Team>>> GetTeams()
         {
@@ -25,7 +24,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(teams);
         }
 
-        // GET: api/teams/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Team>> GetTeam(int id)
         {
@@ -39,7 +37,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(team);
         }
 
-        // GET: api/teams/5/players
         [HttpGet("{id}/players")]
         public async Task<ActionResult<Team>> GetTeamWithPlayers(int id)
         {
@@ -53,7 +50,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(team);
         }
 
-        // GET: api/teams/sport/basketball
         [HttpGet("sport/{sport}")]
         public async Task<ActionResult<IEnumerable<Team>>> GetTeamsBySport(string sport)
         {
@@ -61,7 +57,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(teams);
         }
 
-        // POST: api/teams
         [HttpPost]
         public async Task<ActionResult<Team>> CreateTeam(Team team)
         {
@@ -69,7 +64,6 @@ namespace CopilotSportsApi.Controllers
             return CreatedAtAction(nameof(GetTeam), new { id = createdTeam.Id }, createdTeam);
         }
 
-        // PUT: api/teams/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateTeam(int id, Team team)
         {
@@ -83,7 +77,6 @@ namespace CopilotSportsApi.Controllers
             return NoContent();
         }
 
-        // DELETE: api/teams/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTeam(int id)
         {

@@ -18,7 +18,6 @@ namespace CopilotSportsApi.Controllers
             _gameService = gameService;
         }
 
-        // GET: api/games
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Game>>> GetGames()
         {
@@ -26,7 +25,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(games);
         }
 
-        // GET: api/games/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Game>> GetGame(int id)
         {
@@ -40,7 +38,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(game);
         }
 
-        // GET: api/games/5/details
         [HttpGet("{id}/details")]
         public async Task<ActionResult<Game>> GetGameWithDetails(int id)
         {
@@ -54,7 +51,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(game);
         }
 
-        // GET: api/games/team/5
         [HttpGet("team/{teamId}")]
         public async Task<ActionResult<IEnumerable<Game>>> GetGamesByTeamId(int teamId)
         {
@@ -62,7 +58,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(games);
         }
 
-        // GET: api/games/daterange
         [HttpGet("daterange")]
         public async Task<ActionResult<IEnumerable<Game>>> GetGamesByDateRange(
             [FromQuery] DateTime startDate, 
@@ -72,7 +67,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(games);
         }
 
-        // GET: api/games/status/completed
         [HttpGet("status/{status}")]
         public async Task<ActionResult<IEnumerable<Game>>> GetGamesByStatus(string status)
         {
@@ -80,7 +74,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(games);
         }
 
-        // POST: api/games
         [HttpPost]
         public async Task<ActionResult<Game>> CreateGame(Game game)
         {
@@ -88,7 +81,6 @@ namespace CopilotSportsApi.Controllers
             return CreatedAtAction(nameof(GetGame), new { id = createdGame.Id }, createdGame);
         }
 
-        // PUT: api/games/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateGame(int id, Game game)
         {
@@ -102,7 +94,6 @@ namespace CopilotSportsApi.Controllers
             return NoContent();
         }
 
-        // PATCH: api/games/5/score
         [HttpPatch("{id}/score")]
         public async Task<IActionResult> UpdateGameScore(int id, [FromBody] ScoreUpdateModel scoreUpdate)
         {
@@ -116,7 +107,6 @@ namespace CopilotSportsApi.Controllers
             return NoContent();
         }
 
-        // PATCH: api/games/5/status
         [HttpPatch("{id}/status")]
         public async Task<IActionResult> UpdateGameStatus(int id, [FromBody] StatusUpdateModel statusUpdate)
         {
@@ -130,7 +120,6 @@ namespace CopilotSportsApi.Controllers
             return NoContent();
         }
 
-        // DELETE: api/games/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGame(int id)
         {

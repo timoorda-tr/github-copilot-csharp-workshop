@@ -53,7 +53,7 @@ namespace CopilotSportsApi.Data.Repositories
         {
             return await _context.Teams
                 .Include(t => t.Players)
-                .FirstOrDefaultAsync(t => t.Id == id);
+                .SingleAsync(t => t.Id == id);
         }
 
         /// <summary>

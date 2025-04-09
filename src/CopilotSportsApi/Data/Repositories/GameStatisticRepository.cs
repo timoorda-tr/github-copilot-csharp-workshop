@@ -86,8 +86,9 @@ namespace CopilotSportsApi.Data.Repositories
         public async Task<GameStatistic> GetStatisticByGameAndPlayerAsync(int gameId, int playerId)
         {
             return await _context.GameStatistics
-                .FirstOrDefaultAsync(gs => gs.GameId == gameId && gs.PlayerId == playerId);
-        }        /// <summary>
+                .SingleAsync(gs => gs.GameId == gameId && gs.PlayerId == playerId);
+        }       
+         /// <summary>
         /// Gets statistics by game ID including player and game details
         /// </summary>
         /// <param name="gameId">ID of the game</param>

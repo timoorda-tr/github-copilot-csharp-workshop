@@ -17,7 +17,6 @@ namespace CopilotSportsApi.Controllers
             _playerService = playerService;
         }
 
-        // GET: api/players
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Player>>> GetPlayers()
         {
@@ -25,7 +24,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(players);
         }
 
-        // GET: api/players/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Player>> GetPlayer(int id)
         {
@@ -39,7 +37,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(player);
         }
 
-        // GET: api/players/5/team
         [HttpGet("{id}/team")]
         public async Task<ActionResult<object>> GetPlayerWithTeam(int id)
         {
@@ -50,8 +47,6 @@ namespace CopilotSportsApi.Controllers
                 return NotFound();
             }
             
-            // This will fail when Team is null due to the missing Include in the repository
-            // Task 6 will require fixing the GetPlayerWithTeamAsync method in PlayerRepository
             var result = new
             {
                 Player = new
@@ -74,7 +69,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(result);
         }
 
-        // GET: api/players/team/5
         [HttpGet("team/{teamId}")]
         public async Task<ActionResult<IEnumerable<Player>>> GetPlayersByTeamId(int teamId)
         {
@@ -82,7 +76,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(players);
         }
 
-        // GET: api/players/position/forward
         [HttpGet("position/{position}")]
         public async Task<ActionResult<IEnumerable<Player>>> GetPlayersByPosition(string position)
         {
@@ -90,7 +83,6 @@ namespace CopilotSportsApi.Controllers
             return Ok(players);
         }
 
-        // POST: api/players
         [HttpPost]
         public async Task<ActionResult<Player>> CreatePlayer(Player player)
         {
@@ -98,7 +90,6 @@ namespace CopilotSportsApi.Controllers
             return CreatedAtAction(nameof(GetPlayer), new { id = createdPlayer.Id }, createdPlayer);
         }
 
-        // PUT: api/players/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdatePlayer(int id, Player player)
         {
@@ -112,7 +103,6 @@ namespace CopilotSportsApi.Controllers
             return NoContent();
         }
 
-        // DELETE: api/players/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePlayer(int id)
         {
