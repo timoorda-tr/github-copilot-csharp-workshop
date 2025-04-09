@@ -6,7 +6,7 @@ When providing assistance for this C# Backend Developer Workshop, please follow 
 - Prioritize async/await patterns for all I/O operations to maximize performance and scalability
 - Always follow SOLID principles with a focus on dependency injection and interface-based design
 - Use proper exception handling patterns with try/catch blocks and logging
-- Include XML documentation comments with all public methods, properties, and classes
+- Include XML documentation comments before all public methods
 - Use meaningful variable and method names that clearly express intent
 - Implement consistent error handling with appropriate HTTP status codes and response models
 

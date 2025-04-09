@@ -39,6 +39,7 @@ github-copilot-csharp-workshop/
 │       ├── Controllers/
 │       ├── Data/
 │       │   ├── ApplicationDbContext.cs
+│       │   ├── DbInitializer.cs
 │       │   └── Repositories/
 │       ├── Models/
 │       ├── Services/
@@ -104,11 +105,12 @@ GitHub Copilot Chat role prompting helps define a specific role for Copilot, pro
 ### Task 3 - Explore ASP.NET Core technology with GitHub Copilot
 
 - In VS Code, open GitHub Copilot Chat
+- Install Web Search Extenction for CoPilot
 - Enter the following prompts:
-   - ```@github #web What is the difference between ASP.NET Core 6 and 7?```
-   - ```@github #web How does dependency injection work in ASP.NET Core?```
-   - ```@github #web What are the best practices for RESTful API design with ASP.NET Core?```
-   - ```@github #web How to implement JWT authentication in ASP.NET Core?```
+   - ```#websearch  What is the difference between ASP.NET Core 6 and 7?```
+   - ```#websearch  How does dependency injection work in ASP.NET Core?```
+   - ```#websearch  What are the best practices for RESTful API design with ASP.NET Core?```
+   - ```#websearch  How to implement JWT authentication in ASP.NET Core?```
 
 ### Task 4 - Custom Instructions for GitHub Copilot
 
@@ -125,9 +127,8 @@ Enhance Copilot's chat responses by providing context about your C# development 
 
 - Open the `src/CopilotSportsApi/Controllers/TeamsController.cs` file
 - Use GitHub Copilot Chat to understand the code by selecting it and using the /explain option
-- Select the code and press Ctrl+I (Windows) or Cmd+I (MacOS) and type /doc
+- Select the code and press Ctrl+I (Windows) or Cmd+I (MacOS) choose o3-mini and type /doc
 - Use Copilot Chat to generate additional documentation with the prompt: ```Add XML documentation comments to my code```
-- Add documentation to other controllers and services
 
 ### Task 6 - Fix Code with GitHub Copilot
 
@@ -204,6 +205,9 @@ Create a performance monitoring middleware that measures the execution time of e
   ```
 - Register your extension with GitHub and configure it for your account
 - Test your extension with C# specific queries
+
+### Task 14 - Build a MCP Server
+- Instructions in the Powerpoint Presentation.
 
 ## Key Features to Implement
 
